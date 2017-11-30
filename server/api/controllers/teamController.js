@@ -74,7 +74,10 @@ module.exports.get = (req, res) => {
 
   // If the parameter id isn't an integer greater than 0 send a 400 (bad request).
   if (!id || Number.isNaN(id) || !Number.isInteger(id) || id <= 0) {
-    return res.sendStatus(400)
+    return res.status(400).json({
+      status: 400,
+      message: 'Bad Request'
+    })
   }
 
   // Get the first team that's id equals the parameter id.
@@ -82,7 +85,10 @@ module.exports.get = (req, res) => {
 
   // If no team is found send a 404 (resource not found).
   if (!team) {
-    return res.sendStatus(404)
+    return res.status(404).json({
+      status: 404,
+      message: 'Not Found'
+    })
   }
 
   // Send json response with the wanted team.
