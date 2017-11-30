@@ -7,33 +7,10 @@
 
 'use strict'
 
-const Team = require('../models/Team')
-
 /**
- * Immutable array of immutable teams.
+ * Immutable array of teams.
  */
-const teams = Object.freeze([
-  new Team(1, 'Arsenal', 'https://www.arsenal.com'),
-  new Team(4, 'Chelsea', 'https://www.chelseafc.com'),
-  new Team(6, 'Crystal Palace', 'http://www.cpfc.co.uk'),
-  new Team(7, 'Everton', 'http://www.evertonfc.com'),
-  new Team(10, 'Liverpool', 'http://www.liverpoolfc.com'),
-  new Team(11, 'Manchester City', 'https://www.mancity.com'),
-  new Team(12, 'Manchester United', 'http://www.manutd.com'),
-  new Team(20, 'Southampton', 'https://www.southamptonfc.com'),
-  new Team(21, 'Tottenham Hotspur', 'http://www.tottenhamhotspur.com'),
-  new Team(23, 'Newcastle United', 'http://www.nufc.co.uk'),
-  new Team(25, 'West Ham United', 'http://www.whufc.com'),
-  new Team(26, 'Leicester City', 'http://www.lcfc.com'),
-  new Team(33, 'Watford', 'https://www.watfordfc.com'),
-  new Team(36, 'West Bromwich Albion', 'http://www.wba.co.uk'),
-  new Team(42, 'Stoke City', 'http://www.stokecityfc.com'),
-  new Team(43, 'Burnley', 'https://www.burnleyfootballclub.com'),
-  new Team(45, 'Swansea City', 'http://www.swanseacity.com'),
-  new Team(127, 'Bournemouth', 'http://www.afcb.co.uk'),
-  new Team(131, 'Brighton and Hove Albion', 'https://www.brightonandhovealbion.com'),
-  new Team(159, 'Huddersfield Town', 'https://www.htafc.com')
-].sort((a, b) => a.name.localeCompare(b.name)))
+const teams = Object.freeze(require('./teams.json').sort((a, b) => a.name.localeCompare(b.name)))
 
 /**
  * Sends a JSON response containing teams (based on the search
