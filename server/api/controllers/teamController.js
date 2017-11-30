@@ -51,6 +51,7 @@ module.exports.list = (req, res) => {
     const regexp = new RegExp(req.query.q, 'i')
     result = result.filter(team => regexp.test(team.name))
   }
+  result = result.map(team => { return {id: team.id, name: team.name} })
 
   // Send json response with teams - if any.
   console.log(`Found ${result.length} team${result.length !== 1 ? 's' : ''}.`)
