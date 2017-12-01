@@ -4,7 +4,7 @@
 
 ### `api/teams`
 
-You can retrive all the teams.
+You can retrieve all the teams.
 
 Example of a request:
 
@@ -108,7 +108,7 @@ Content-Type: application/json; charset=utf-8
 
 ### `api/teams/:id`
 
-To retrive a team you need to know it's id, which should be provided as a part of the URL.
+To retrieve a team, you need to know its id, which should be provided as a part of the URL.
 
 Example of a request:
 
@@ -135,9 +135,9 @@ Content-Type: application/json; charset=utf-8
 } 
 ```
 
-| Path     | Type   | Description            |
-|----------|--------|------------------------|
-| id       | Number | The team's id          |
-| name     | String | The team's name        |
-| nickname | String | The team's nickname    |
-| url      | String | The team's offical url |
+| Path     | Type   | Description             |
+|----------|--------|-------------------------|
+| id       | Number | The team's id           |
+| name     | String | The team's name         |
+| nickname | String | The team's nickname     |
+| url      | String | The team's official URL |
