@@ -132,7 +132,7 @@ Content-Type: application/json; charset=utf-8
   "name":"Stoke City",
   "nickname":"Potters",
   "url":"http://www.stokecityfc.com"
-}
+} 
 ```
 
 | Path     | Type   | Description            |
