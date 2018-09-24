@@ -13,9 +13,6 @@ module.exports = {
     public: 'localhost:4000'
   },
   devtool: 'cheap-eval-source-map',
-  watchOptions: {
-    poll: true
-  },
   module: {
     rules: [
       {
